@@ -135,7 +135,10 @@ class CosmosTheme : AppCompatActivity() {
                     return@OnItemSelectedListener true
                 }
                 R.id.likes -> {
-                    startActivity(Intent(this@CosmosTheme, CosmosLikes::class.java))
+                    findViewById<ImageView>(R.id.birthday).visibility = View.VISIBLE
+                    findViewById<ImageView>(R.id.birthday).setOnClickListener {
+                        findViewById<ImageView>(R.id.birthday).visibility = View.GONE
+                    }
                     return@OnItemSelectedListener true
                 }
                 R.id.receipts -> {
@@ -163,21 +166,12 @@ class CosmosTheme : AppCompatActivity() {
                     .withName("Мои друзья")
                     .withSelectable(false)
                     .withIcon(com.example.productslist.R.drawable.baseline_group_24),
-                PrimaryDrawerItem().withIdentifier(99)
-                    .withIconTintingEnabled(true)
-                    .withName("Любимые продукты")
-                    .withSelectable(false)
-                    .withIcon(com.example.productslist.R.drawable.baseline_favorite_24),
+
                 PrimaryDrawerItem().withIdentifier(101)
                     .withIconTintingEnabled(true)
                     .withName("Избранные списки")
                     .withSelectable(false)
                     .withIcon(com.example.productslist.R.drawable.baseline_bookmark_24),
-                PrimaryDrawerItem().withIdentifier(102)
-                    .withIconTintingEnabled(true)
-                    .withName("Мои рецепты")
-                    .withSelectable(false)
-                    .withIcon(com.example.productslist.R.drawable.baseline_receipt_long_24),
                 DividerDrawerItem(),
                 PrimaryDrawerItem().withIdentifier(108)
                     .withIconTintingEnabled(true)
@@ -200,6 +194,7 @@ class CosmosTheme : AppCompatActivity() {
                             startActivity(Intent(this@CosmosTheme, CosmosFrends::class.java))
 
                         }
+
                         2 -> {
 
                         }
@@ -210,12 +205,6 @@ class CosmosTheme : AppCompatActivity() {
 
                         }
                         5 -> {
-
-                        }
-                        6 -> {
-
-                        }
-                        7 -> {
                             FirebaseAuth.getInstance().signOut()
                             startActivity(Intent(this@CosmosTheme, Login::class.java))
                             finish()
@@ -329,7 +318,8 @@ class CosmosTheme : AppCompatActivity() {
 
     fun alertHaveAccept(nameList: String, id: String): Boolean {
         val inflater = (this as Activity).layoutInflater
-        var dialogLayout = inflater.inflate(com.example.productslist.R.layout.cosmos_already_list, null)
+        var dialogLayout =
+            inflater.inflate(com.example.productslist.R.layout.cosmos_already_list, null)
         var alertDialog = AlertDialog.Builder(this)
         alertDialog.setView(dialogLayout)
         val show = alertDialog.show()
@@ -396,7 +386,10 @@ class CosmosTheme : AppCompatActivity() {
                                     val keyName = ds.key.toString()
                                     model.name = keyName
                                     holder.setDetails(
-                                       model.Users, model.name, model.buttonAccept, model.buttonDeny
+                                        model.Users,
+                                        model.name,
+                                        model.buttonAccept,
+                                        model.buttonDeny
                                     )
                                 }
 
@@ -447,7 +440,7 @@ class CosmosTheme : AppCompatActivity() {
                             )
                         )
                     }
-                    if (searchInput.text == null){
+                    if (searchInput.text == null) {
                         holder.itemView.visibility = View.VISIBLE
                     }
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -11,12 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProductsList"
         tools:targetApi="31">
-        <activity
-            android:name=".CreateReceipt"
-            android:exported="false" />
-        <activity
-            android:name=".Receipts"
-            android:exported="false" />
+       
         <activity
             android:name=".Likes"
             android:exported="false" />
@@ -45,9 +40,7 @@
             android:name=".CosmosTheme.CosmosRead"
             android:exported="false"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".ReadPost"
-            android:exported="false" />
+
         <activity
             android:name=".Read"
             android:exported="false"

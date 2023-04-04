@@ -6,6 +6,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.graphics.Color
+import android.graphics.PixelFormat
 import android.os.Build
 import android.os.Bundle
 import android.text.Editable
@@ -24,6 +25,7 @@ import androidx.core.app.ActivityCompat.startActivityForResult
 import androidx.lifecycle.whenResumed
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.productslist.CosmosTheme.CosmosFrends
 import com.example.productslist.CosmosTheme.CosmosLikes
 import com.example.productslist.CosmosTheme.CosmosTheme
 import com.example.productslist.Holders.AcceptLists
@@ -159,7 +161,11 @@ class MainActivity : AppCompatActivity() {
                     startActivity(Intent(this@MainActivity, AddFriend::class.java))
                 }
                 R.id.likes -> {
-                    startActivity(Intent(this@MainActivity, Likes::class.java))
+                    findViewById<ImageView>(R.id.birthday).visibility =  View.VISIBLE
+                    findViewById<ImageView>(R.id.birthday).setOnClickListener {
+                        findViewById<ImageView>(R.id.birthday).visibility =  View.GONE
+
+                    }
                     return@OnItemSelectedListener true
                 }
                 R.id.receipts -> {
@@ -187,21 +193,11 @@ class MainActivity : AppCompatActivity() {
                     .withName("Мои друзья")
                     .withSelectable(false)
                     .withIcon(R.drawable.baseline_group_24),
-                PrimaryDrawerItem().withIdentifier(99)
-                    .withIconTintingEnabled(true)
-                    .withName("Любимые продукты")
-                    .withSelectable(false)
-                    .withIcon(R.drawable.baseline_favorite_24),
                 PrimaryDrawerItem().withIdentifier(101)
                     .withIconTintingEnabled(true)
                     .withName("Избранные списки")
                     .withSelectable(false)
                     .withIcon(R.drawable.baseline_bookmark_24),
-                PrimaryDrawerItem().withIdentifier(102)
-                    .withIconTintingEnabled(true)
-                    .withName("Мои рецепты")
-                    .withSelectable(false)
-                    .withIcon(R.drawable.baseline_receipt_long_24),
                 DividerDrawerItem(),
                 PrimaryDrawerItem().withIdentifier(108)
                     .withIconTintingEnabled(true)
@@ -221,10 +217,12 @@ class MainActivity : AppCompatActivity() {
                 ): Boolean {
                     when (position) {
                         1 -> {
-                            startActivity(Intent(this@MainActivity, Friends::class.java))
+                            startActivity(Intent(this@MainActivity, CosmosFrends::class.java))
 
                         }
+
                         2 -> {
+
                         }
                         3 -> {
 
@@ -233,17 +231,11 @@ class MainActivity : AppCompatActivity() {
 
                         }
                         5 -> {
-
-                        }
-                        6 -> {
-
-                        }
-                        7 -> {
                             FirebaseAuth.getInstance().signOut()
                             startActivity(Intent(this@MainActivity, Login::class.java))
                             finish()
                         }
-                        
+
                     }
                     return false
                 }

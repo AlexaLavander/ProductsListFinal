@@ -131,4 +131,11 @@
         app:layout_constraintEnd_toEndOf="@+id/materialToolbar"
         app:layout_constraintStart_toStartOf="@+id/materialToolbar"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/happy_birthday"
+        android:visibility="gone"
+        android:id="@+id/birthday"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
