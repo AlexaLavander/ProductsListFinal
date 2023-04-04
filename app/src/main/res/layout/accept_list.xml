@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="0dp"
+    android:theme="@style/Theme.MaterialComponents.DayNight"
+    app:cardUseCompatPadding="true"
+    app:contentPadding="4dp"
+    android:foreground="@android:color/transparent"
+    android:backgroundTint="@android:color/transparent"
+    android:layout_marginHorizontal="10dp"
+
+    >
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="30dp"
+        android:backgroundTint="@android:color/white"
+        android:alpha="0.9"
+        app:strokeColor="@color/green_900"
+        app:strokeWidth="2dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="10dp"
+            android:orientation="vertical"
+            android:gravity="left">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:text="List"
+                android:textColor="@color/green_base"
+                android:textSize="20sp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="right"
+                >
+            <Button
+                android:id="@+id/accept"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/green_900"
+                android:text="Accept"
+                />
+            <Button
+                android:id="@+id/deny"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/green_900"
+                android:text="Deny"
+                />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</com.google.android.material.card.MaterialCardView>

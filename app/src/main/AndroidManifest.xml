@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/product_icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ProductsList"
+        tools:targetApi="31">
+        <activity
+            android:name=".CreateReceipt"
+            android:exported="false" />
+        <activity
+            android:name=".Receipts"
+            android:exported="false" />
+        <activity
+            android:name=".Likes"
+            android:exported="false" />
+        <activity
+            android:name=".CosmosTheme.CosmosFrends"
+            android:exported="false" />
+        <activity
+            android:name=".CosmosTheme.CosmosLikes"
+            android:exported="false" />
+        <activity
+            android:name=".CosmosTheme.CosmosAddFriend"
+            android:exported="false" />
+
+        <activity
+            android:name=".AddFriend"
+            android:exported="false" />
+
+        <activity
+            android:name=".Friends"
+            android:exported="false" />
+        <activity
+            android:name=".CosmosTheme.CosmosTheme"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CosmosTheme.CosmosRead"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ReadPost"
+            android:exported="false" />
+        <activity
+            android:name=".Read"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Register"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Login"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+
+        </activity>
+    </application>
+
+</manifest>

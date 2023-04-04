@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="10dp"
+    android:backgroundTint="@android:color/white"
+    android:foregroundTint="@android:color/transparent"
+    app:cardCornerRadius="30dp"
+    app:cardElevation="0dp"
+    app:cardUseCompatPadding="true"
+    app:contentPadding="4dp"
+    app:strokeColor="@color/green_900"
+    app:strokeWidth="2dp">
+
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:enabled="true"
+        android:singleLine="true"
+        android:text="List"
+        android:layout_marginStart="10dp"
+        android:layout_marginVertical="10dp"
+        android:textColor="@color/green_900"
+        android:textSize="20sp" />
+
+
+    <Button
+        android:id="@+id/read"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginBottom="7dp"
+        android:backgroundTint="@color/green_900"
+        android:text="read" />
+</com.google.android.material.card.MaterialCardView>

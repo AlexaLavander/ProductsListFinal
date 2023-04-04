@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="green_base">#78966a</color>
+    <color name="green_900">#225c17</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="cosmos">#8b00dd</color>
+    <color name="cosmosRose">#ef0078</color>
+    <color name="blue">#10e7e0</color>
+</resources>

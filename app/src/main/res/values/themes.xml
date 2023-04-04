@@ -1,0 +1,49 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.ProductsList" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/green_900</item>
+        <item name="colorPrimaryVariant">@color/green_base</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorOnBackground">@drawable/done</item>
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/green_900</item>
+        <!-- Customize your theme here. -->
+
+        <item name="colorBackgroundFloating">#00000000</item>
+
+    </style>
+
+    <style name="Cosmos.Theme.ProductsList" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="android:previewImage">@drawable/cosmos_image</item>
+        <item name="colorPrimaryVariant">@color/cosmos</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorOnBackground">@drawable/cosmos_image</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <!-- Customize your theme here. -->
+
+        <item name="colorBackgroundFloating">#00000000</item>
+
+    </style>
+
+    <style name="Theme.ProductsList.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.ProductsList.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.ProductsList.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <attr name="image_tint_color" format="reference"/>
+    <style name="YourTheme1" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="image_tint_color">@drawable/cosmos_image</item>
+    </style>
+
+</resources>

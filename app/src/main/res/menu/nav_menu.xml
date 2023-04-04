@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/changeTheme"
+            android:icon="@drawable/baseline_color_lens_24"
+            android:title="Сменить тему" />
+
+        <item
+            android:id="@+id/favorite"
+            android:icon="@drawable/baseline_bookmark_24"
+            android:title="Избранные списки" />
+        <item
+            android:id="@+id/myReceipts"
+            android:icon="@drawable/baseline_receipt_long_24"
+            android:title="Мои рецепты" />
+        <item
+            android:id="@+id/myFriends"
+            android:icon="@drawable/baseline_group_24"
+            android:title="Мои друзья" />
+
+    </group>
+    <group>
+        <item
+            android:id="@+id/password"
+            android:icon="@drawable/baseline_settings_24"
+            android:title="Изменить пароль" />
+
+
+        <item
+            android:id="@+id/log_out"
+            android:icon="@drawable/baseline_logout_24"
+            android:title="Выйти из аккаунта" />
+
+    </group>
+</menu>

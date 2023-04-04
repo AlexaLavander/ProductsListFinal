@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="10dp"
+    android:backgroundTint="@android:color/transparent"
+    android:foreground="@android:color/transparent"
+    android:outlineSpotShadowColor="@android:color/transparent"
+    app:cardCornerRadius="30dp"
+    app:cardUseCompatPadding="true"
+    app:contentPadding="8dp"
+    >
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:outlineSpotShadowColor="@android:color/transparent"
+        app:cardCornerRadius="30dp"
+        android:backgroundTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="@color/green_900"
+        app:strokeWidth="2dp"
+        tools:ignore="ExtraText">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:text="Add User"
+                android:textColor="@color/cosmos"
+                android:textSize="30dp" />
+
+
+            <LinearLayout
+                android:id="@+id/addPartner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <Button
+                        android:id="@+id/send_request"
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:backgroundTint="@color/cosmos"
+                        android:text="Send Request"
+                        />
+                    <Button
+                        android:id="@+id/cancel"
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:backgroundTint="@color/cosmos"
+                        android:text="Cancel" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/addPersonName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Username"
+                        android:textColorHint="@color/cosmos"
+                        android:textColor="@color/cosmos"
+                        android:singleLine="true"
+                        android:layout_marginEnd="10dp"/>
+
+                    <ListView
+                        android:id="@+id/list"
+                        android:textColor="@color/green_900"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</com.google.android.material.card.MaterialCardView>
